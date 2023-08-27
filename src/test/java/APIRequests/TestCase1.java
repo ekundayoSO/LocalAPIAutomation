@@ -107,11 +107,8 @@ public class TestCase1 {
 
         baseURI = "http://localhost:3000";
 
-        //List<Integer> userIDsToDelete = Arrays.asList(4, 5);
-            given().
-                //body(userIDsToDelete).
             when().
-                delete("/users/15").
+                delete("/users/4").
             then().
                 statusCode(200);
 
