@@ -1,5 +1,7 @@
 package APIRequests;
 
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import io.restassured.http.ContentType;
 import org.json.simple.JSONObject;
 import org.testng.annotations.Test;
@@ -8,7 +10,9 @@ import static io.restassured.RestAssured.*;
 
 public class TestCase1 {
 
-   @Test(priority = 1)
+    @Feature("Get Request")
+    @Story("Get List of Users from the server")
+    @Test(priority = 1)
     public void test_get() {
 
         baseURI = "http://localhost:3000";
@@ -20,6 +24,8 @@ public class TestCase1 {
                 log().all();
     }
 
+    @Feature("Get Request")
+    @Story("Get a users details from the server")
     @Test(priority = 2)
     public void test_get2() {
 
@@ -33,6 +39,8 @@ public class TestCase1 {
                 log().all();
     }
 
+    @Feature("Post Request")
+    @Story("Create new users' profile in the server")
     @Test(priority = 3)
     public void test_post() {
 
@@ -57,6 +65,8 @@ public class TestCase1 {
 
     }
 
+    @Feature("Patch Request")
+    @Story("Update part of a user's profile in server")
     @Test(priority = 4)
     public void test_patch() {
 
@@ -79,6 +89,8 @@ public class TestCase1 {
 
     }
 
+    @Feature("Put Request")
+    @Story("Update users information in the server")
     @Test(priority = 5)
     public void test_put() {
 
@@ -102,7 +114,9 @@ public class TestCase1 {
                 log().all();
     }
 
-   @Test(priority = 6)
+    @Feature("Delete Request")
+    @Story("Deleting user(s) profile from the server")
+    @Test(priority = 6)
     public void test_delete() {
 
         baseURI = "http://localhost:3000";
