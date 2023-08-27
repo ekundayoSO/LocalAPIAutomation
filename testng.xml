@@ -4,7 +4,10 @@
 <parameter name="userId" value="3"></parameter>
     <test thread-count="3" name="Test">
         <classes>
+            <class name="APIRequests.TestCase1"/>
+            <class name="APIRequests.TestCase2"/>
+            <class name="APIRequests.TestCase3"/>
             <class name="APIRequests.TestCase4"/>
-         </classes>
+        </classes>
     </test>
 </suite>
